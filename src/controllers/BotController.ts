@@ -74,7 +74,7 @@ class BotController {
         sessions[userId].quantidade = parseInt(option);
 
         res = {
-          message: `Seu Pedido Atual é: ${sessions[userId].sabor} ${sessions[userId].quantidade}x, CONFIRMAR?`,
+          message: `Seu Pedido Atual é: ${sessions[userId].quantidade} Pizza's de ${sessions[userId].sabor}, CONFIRMAR?`,
           menu: ['sim', 'não']
         };
       } else if (option === 'sim') {
@@ -91,7 +91,7 @@ class BotController {
             message: 'Pedido criado com sucesso!',
             sabor: sessions[userId].sabor,
             quant: sessions[userId].quantidade,
-            menu: ['voltar ao início', 'ver pedidos']
+            menu: ['voltar ao início']
           };
 
           // Limpar sessão após confirmar pedido
